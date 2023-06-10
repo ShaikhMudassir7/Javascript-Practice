@@ -71,3 +71,20 @@ console.log(parseInt(integer+3.32));
 console.log(parseFloat(integer+3.32));
 
 // Uptill: Converting strings to numbers
+
+// array empty string
+let arr = [,1,,3];
+console.log(arr.length);
+console.log(arr);
+
+const myList = [
+  "home",
+ +"school", // this line will not be displayed
+  "hospital",
+];
+
+console.log(myList);
+
+
+// String literals
+console.log("break lines \n Null Bytes \b Form Feed \f carriage return \r tab \t vertical tab \n\v Single Apostrophe \' double Apostrophe \" BackSlash \\");
