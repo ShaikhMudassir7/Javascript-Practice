@@ -41,50 +41,70 @@ scope(); // local scope declaration
 console.log(y); // global scope declaration
 
 if (float) {
-    var y = 5;
-  }
-  console.log(y); // y is 5
+  var y = 5;
+}
+console.log(y); // y is 5
 
 //   Hoisted Variable
-  console.log(z === undefined); // true
-  var z = 3;
-  
-  (function () {
-    console.log(z); // undefined
-    var z = "local value";
-  })();
-  
+console.log(z === undefined); // true
+var z = 3;
+
+(function () {
+  console.log(z); // undefined
+  var z = "local value";
+})();
+
 // Const just provide protection in re-assignment not mutation of arrays
 // const global = 32;
 // global = 31; // cant be declared
 
-const city = ["City 1", "City 2", "City 3", "City 4", "City 5", "City 6", "City 7", "City 8"];
-city.push('City 2');
+const city = [
+  "City 1",
+  "City 2",
+  "City 3",
+  "City 4",
+  "City 5",
+  "City 6",
+  "City 7",
+  "City 8",
+];
+city.push("City 2");
 console.log(city);
 // Data structure and type definitions
 
 // Parse Integer
 let integer = "101";
-console.log(parseInt(integer+3.32));
+console.log(parseInt(integer + 3.32));
 
 // Parse Float
-console.log(parseFloat(integer+3.32));
+console.log(parseFloat(integer + 3.32));
 
 // Uptill: Converting strings to numbers
 
 // array empty string
-let arr = [,1,,3];
+let arr = [, 1, , 3];
 console.log(arr.length);
 console.log(arr);
 
 const myList = [
   "home",
- +"school", // this line will not be displayed
+  +"school", // this line will not be displayed
   "hospital",
 ];
 
 console.log(myList);
 
-
 // String literals
-console.log("break lines \n Null Bytes \b Form Feed \f carriage return \r tab \t vertical tab \n\v Single Apostrophe \' double Apostrophe \" BackSlash \\");
+console.log(
+  "break lines \n Null Bytes \b Form Feed \f carriage return \r tab \t vertical tab \n\v Single Apostrophe ' double Apostrophe \" BackSlash \\"
+);
+
+// JavaScript Blocks
+
+var blk = 2;
+{
+  var blk = 3; //block doesn't effect var scope
+}
+
+console.log(blk); //3
+
