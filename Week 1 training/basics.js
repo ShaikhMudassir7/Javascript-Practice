@@ -108,3 +108,109 @@ var blk = 2;
 
 console.log(blk); //3
 
+// An if statement looks like this:
+
+if (blk == 3) {
+  console.log("Blk is correct");
+} else {
+  console.log("Blk is wrong");
+}
+
+// elif statement looks like this
+
+if (blk == 4) {
+  console.log("statement1");
+} else if (blk == 5) {
+  console.log("statement2");
+} else if (blk == 3) {
+  console.log("statement3");
+} else {
+  console.log("statementLast");
+}
+
+function checkData() {
+  form1 = document.getElementById("form1");
+  input1 = document.getElementById("input1");
+  if (document.form1.input1.value.length === 3) {
+    return true;
+  } else {
+    alert(
+      `Enter exactly three characters. ${document.form1.input1.value} is not valid.`,
+    );
+    return false;
+  }
+}
+
+// Switch between statements
+switch (int) {
+  case 1:
+    console.log("statements1");
+    break;
+  case 2:
+    console.log("statements2");
+    break;
+  default:
+    console.log("statementsDefault");
+}
+
+let fruitType = ['Apples', 'Oranges', 'Bananas', 'Cherries','Mangoes','Papayas'];
+
+switch (fruitType[4]) {
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
+    break;
+  case "Apples":
+    console.log("Apples are $0.32 a pound.");
+    break;
+  case "Bananas":
+    console.log("Bananas are $0.48 a pound.");
+    break;
+  case "Cherries":
+    console.log("Cherries are $3.00 a pound.");
+    break;
+  case "Mangoes":
+    console.log("Mangoes are $0.56 a pound.");
+    break;
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
+    break;
+  default:
+    console.log(`Sorry, we are out of ${fruitType}.`);
+}
+console.log("Is there anything else you'd like?");
+
+// Exception handling
+
+// throw
+throw "Error2"; // String type
+throw 42; // Number type
+throw true; // Boolean type
+throw {
+  toString() {
+    return "I'm an object!";
+  },
+};
+
+// try and catch
+function getMonthName(mo) {
+  mo--; // Adjust month number for array index (so that 0 = Jan, 11 = Dec)
+  const months = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+  ];
+  if (months[mo]) {
+    return months[mo];
+  } else {
+    throw new Error("InvalidMonthNo"); // throw keyword is used here
+  }
+}
+try {
+  // statements to try
+  monthName = getMonthName(myMonth); // function could throw exception
+  console.log(monthName);
+} catch (e) {
+  monthName = "unknown";
+  console.log(e.message); // pass exception object to error handler (i.e. your own function)
+}
+
+console.log();
