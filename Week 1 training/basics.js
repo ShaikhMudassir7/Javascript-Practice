@@ -182,14 +182,14 @@ console.log("Is there anything else you'd like?");
 // Exception handling
 
 // throw
-throw "Error2"; // String type
-throw 42; // Number type
-throw true; // Boolean type
-throw {
-  toString() {
-    return "I'm an object!";
-  },
-};
+// throw "Error2"; // String type
+// throw 42; // Number type
+// throw true; // Boolean type
+// throw {
+//   toString() {
+//     return "I'm an object!";
+//   },
+// };
 
 // try and catch
 function getMonthName(mo) {
@@ -214,3 +214,139 @@ try {
 }
 
 console.log();
+
+// For loop Patterns
+// left side of pattern 
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+// *******
+// ********
+// *********
+let itteration = 10;
+let star = "";
+for (let i = 0; i < itteration; i++) {
+  for (let j = 0; j < i; j++) {
+    star += "*";
+  }
+  star += "\n";
+}
+
+console.log(star);
+
+console.log("\n");
+
+// For loop Patterns
+// left side of pattern 
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+// *******
+// ********
+// *********
+
+let star2 = "";
+for (let i = 0; i < itteration; i++) {
+
+  for (let j = 0; j < i; j++) {
+    star2 += " ";
+  }
+  for (let j = 0; j < i; j++) {
+    star2 += "*";
+  }
+  
+  star2 += "\n";
+}
+
+console.log(star2);
+
+console.log("\n");
+
+
+// left side number pattern
+// 1
+// 22
+// 333
+// 4444
+// 55555
+// 666666
+// 7777777
+// 88888888
+// 999999999
+let numb = 0;
+for (let i = 1; i < itteration; i++) {
+  for (let j = 0; j < i; j++) {
+    numb += i;
+  }
+  numb += "\n";
+}
+
+console.log(numb);
+
+console.log("\n");
+
+
+// Left side pattern number
+let numb2 = 0;
+for (let i = 2; i < itteration; i++) {
+  for (let j = 1; j < i; j++) {
+    numb2 += j;
+  }
+  numb2 += "\n";
+}
+
+console.log(numb2);
+
+console.log("\n");
+
+
+//left side number
+// 1
+// 23
+// 456
+// 78910
+let numb3=0;
+let c=1
+for (let i = 1; i < 5; i++) {
+  for (let j = 0; j < i; j++) {
+    
+    numb3 += c;
+    c++;
+  }
+  
+  numb3 += "\n";
+}
+
+console.log(numb3);
+
+
+
+
+// pyhton code
+// import string 
+
+// lowercase = string.ascii_lowercase
+// uppercase = string.ascii_uppercase
+
+// name = "I_Am_CoDer_AnD_My_naMe_is ZaKaULLah"
+
+// upperlist=[i for i in uppercase] 
+// lowerlist=[i for i in lowercase]
+
+// alpa1 = zip(upperlist,lowerlist)
+// alpa2 = zip(lowerlist,upperlist)
+// # print(list(alpa1))
+// # print(list(alpa2))
+
+// rev = dict(alpa1)
+// print(rev)
+// rev.update(dict(alpa2))
+// rev.update({'_':'.'})
+
+// print(name.translate(str.maketrans(rev)))
