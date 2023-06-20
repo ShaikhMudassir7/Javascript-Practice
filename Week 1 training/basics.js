@@ -383,7 +383,7 @@ console.log(numb3);
 // for loop
 
 let array = ["Sheep", "Mango", "Hello", "Hail", 5];
-for (let i = 0; i < array.length; i++) {
+text_loop:for (let i = 0; i < array.length; i++) {
   const elements = array[i];
   console.log(elements);
 }
@@ -417,7 +417,7 @@ while (i < 10) {
 }
 
 
-function countSelected(selectObject) {
+The_counter_of_function:function countSelected(selectObject) {
   let numberSelected = 0;
   console.log("Options: "+ selectObject.options.length )
   for (let i = 0; i < selectObject.options.length; i++) {
