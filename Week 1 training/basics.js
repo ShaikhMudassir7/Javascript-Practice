@@ -194,24 +194,51 @@ console.log("Is there anything else you'd like?");
 // try and catch
 function getMonthName(mo) {
   mo--; // Adjust month number for array index (so that 0 = Jan, 11 = Dec)
+  
   const months = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
   ];
   if (months[mo]) {
     return months[mo];
+    console.log(months[mo]);
   } else {
     throw new Error("InvalidMonthNo"); // throw keyword is used here
   }
 }
 try {
   // statements to try
-  monthName = getMonthName(myMonth); // function could throw exception
+  let monthName1 = getMonthName(12); // function couldn't throw exception
+  console.log(monthName1);
+  let monthName = getMonthName(myMonth); // function could throw exception
   console.log(monthName);
 } catch (e) {
   monthName = "unknown";
   console.log(e.message); // pass exception object to error handler (i.e. your own function)
 }
+
+// This will print finally block statement
+function f() {
+  try {
+    console.log(0);
+    throw "bogus";
+  } catch (e) {
+    console.log(1);
+    console.log(e);
+    // This return statement is suspended
+    // until finally block has completed
+    return true;
+    console.log(2); // not reachable
+  } finally {
+    console.log(3);
+    return false; // overwrites the previous "return"
+    console.log(4); // not reachable
+  }
+  // "return false" is executed now
+  console.log(5); // not reachable
+}
+console.log(f()); // 0, 1, 3, false
+
 
 console.log();
 
@@ -350,3 +377,61 @@ console.log(numb3);
 // rev.update({'_':'.'})
 
 // print(name.translate(str.maketrans(rev)))
+
+
+
+// for loop
+
+let array = ["Sheep", "Mango", "Hello", "Hail", 5];
+for (let i = 0; i < array.length; i++) {
+  const elements = array[i];
+  console.log(elements);
+}
+
+// for..in function
+
+const object = {
+  Name: "Ivan",
+  age: 20,
+  sex: "male",
+  ht: 6.7,
+  married: true,
+};
+for (const key in object) {
+    const elements = object[key];
+    console.log(key+": "+elements);
+}
+
+//do while loop
+let i = 0;
+do {
+  i++;
+  console.log("Do-While Statement "+ i);
+} while (i < 10);
+
+// while loop
+i= 0;
+while (i < 10) {
+  i++;
+  console.log("While Statement "+ i);
+}
+
+
+function countSelected(selectObject) {
+  let numberSelected = 0;
+  console.log("Options: "+ selectObject.options.length )
+  for (let i = 0; i < selectObject.options.length; i++) {
+    if (selectObject.options[i].selected) {
+      numberSelected++;
+    }
+  }
+  console.log(numberSelected);
+  return numberSelected;
+}
+
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", () => {
+  const musicTypes = document.selectForm.musicTypes;
+  console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
+});
