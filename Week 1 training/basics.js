@@ -416,7 +416,7 @@ while (i < 10) {
   console.log("While Statement "+ i);
 }
 
-
+// for loop for counting Option
 The_counter_of_function:function countSelected(selectObject) {
   let numberSelected = 0;
   console.log("Options: "+ selectObject.options.length )
@@ -435,3 +435,9 @@ btn.addEventListener("click", () => {
   const musicTypes = document.selectForm.musicTypes;
   console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
 });
+
+
+const cst = 1+ 2 * 3 / 2 ;
+const krla = (2 * 3)/ 2 + 1;
+
+console.log(cst+" "+krla);
