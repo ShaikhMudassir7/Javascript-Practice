@@ -441,3 +441,134 @@ const cst = 1+ 2 * 3 / 2 ;
 const krla = (2 * 3)/ 2 + 1;
 
 console.log(cst+" "+krla);
+function f(){
+  return 1;
+}
+Addition_assignment:x += f()
+console.log(x);	
+Addition_assignment:x = x + f()
+Subtraction_assignment:x -= f()
+console.log(x);	
+Subtraction_assignment:x = x - f()
+Multiplication_assignment:x *= f()
+console.log(x);	
+Multiplication_assignment:x = x * f()
+Division_assignment:x /= f()
+console.log(x);	
+Division_assignment:x = x / f()
+Remainder_assignment:x %= f()
+console.log(x)	
+Remainder_assignment:x = x % f()
+Exponentiation_assignment:x **= f()
+console.log(x)	
+Exponentiation_assignment:x = x ** f()
+Left_shift_assignment:x <<= f()
+console.log(x)	
+Left_shift_assignment:x = x << f()
+Right_shift_assignment:x >>= f()
+console.log(x)	
+Right_shift_assignment:x = x >> f()
+Unsigned_right_shift_assignment:x >>>= f()
+console.log(x)	
+Unsigned_right_shift_assignment:x = x >>> f()
+Bitwise_AND_assignment:x &= f()
+console.log(x)	
+Bitwise_AND_assignment:x = x & f()
+Bitwise_XOR_assignment:x ^= f()
+console.log(x)	
+Bitwise_XOR_assignment:x = x ^ f()
+Bitwise_OR_assignment:x |= f()
+console.log(x)	
+Bitwise_OR_assignment:x = x | f()
+Logical_AND_assignment:x &&= f()
+console.log(x)	
+Logical_AND_assignment:x && (x = f())
+Logical_OR_assignment:x ||= f()
+console.log(x)
+Logical_OR_assignment:	x || (x = f())
+Nullish_coalescing_assignment:x ??= f()
+console.log(x)	
+Nullish_coalescing_assignment:x ?? (x = f())
+
+// Destructutring 
+const foo = ['one','two','three'];
+
+// // without Destructuring
+// const one = foo[0];
+// const two = foo[1];
+// const three = foo[2];
+
+// with Destructuring
+const [one,two,three] = foo;
+console.log(one);
+
+// Evaluation and nesting 
+let any = f();
+function g() {
+  return 3;
+}
+any = g();
+console.log(any);
+
+let var1 = f();
+let var2 = (var1 = f());
+console.log(var2-g());
+
+console.log(var1 = f());
+
+// an nesting example
+function f1() {
+  console.log("F!");
+  return 2;
+}
+function g1() {
+  console.log("G!");
+  return 3;
+}
+
+let v1, v2;
+
+v1 = v2 = f1();
+console.log("v1 = " + v1);
+v1 = [f1(), v2=g1()]; 
+console.log("now v1 = " + v1);
+console.log("now v2 = " + v2);
+v2[f1()] = g1();
+console.log("v2 = " + v2);
+
+// Numbers in javascript 
+// Decimel numbers
+let decimel = 1241323;
+console.log(decimel);
+// Binary numbers 0B binary converter (0b)
+let binary = 0B010011;
+console.log(binary);
+
+// Octal numbers in javascript (0o)
+let octal = 0O010011;
+console.log(octal);
+
+// Hexadecimal numbers in javascript (0x)
+let hex = 0xae2910fe;
+console.log(hex);
+
+// Exponential numbers in javascript
+console.log(0e-5+" "+0e+5+" "+5e1+" "+175e-2+" "+1e3+" "+1e-3+" "+1E3);
+
+const biggestNum = Number.MAX_VALUE;
+console.log(biggestNum);
+const smallestNum = Number.MIN_VALUE;
+console.log(smallestNum);
+const infiniteNum = Number.POSITIVE_INFINITY;
+console.log(infiniteNum);
+const negInfiniteNum = Number.NEGATIVE_INFINITY;
+console.log(negInfiniteNum);
+const notANum = Number.NaN;
+console.log(notANum);
+
+// Date
+const dateObjectName = new Date([6, 21,2023]);
+console.log(dateObjectName);
+const today = new Date();
+const endYear = new Date(2016)
+endYear.setFullYear(today.getFullYear());
