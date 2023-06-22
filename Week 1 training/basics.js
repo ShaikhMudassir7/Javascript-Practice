@@ -566,9 +566,23 @@ console.log(negInfiniteNum);
 const notANum = Number.NaN;
 console.log(notANum);
 
+// for(let itr = 0; itr<= infiniteNum; itr++){
+//   console.log(itr);
+// }
+
 // Date
 const dateObjectName = new Date([6, 21,2023]);
 console.log(dateObjectName);
 const today = new Date();
 const endYear = new Date(2016)
 endYear.setFullYear(today.getFullYear());
+
+
+let random = 1232.23423;
+
+// Math class
+console.log(Math.abs(random)+" sin: "+Math.sin(random)+" cos: "+ Math.cos(random)+" tan: "+ Math.tan(random));
+
+//set/get day
+let today1 =  Date().getMonthName;
+console.log(today);
